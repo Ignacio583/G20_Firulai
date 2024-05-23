@@ -1,0 +1,16 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block titulo %}FIRULAI{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'web/styles/index.css' %}">
+{% endblock %}
+
+{% block main %}
+    <h1>Firulai: El refugio de las Mascotas</h1>
+    <p>{{ fecha_hora }}</p>
+
+    
+{% endblock %}
+
+
