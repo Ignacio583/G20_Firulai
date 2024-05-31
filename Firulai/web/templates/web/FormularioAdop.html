@@ -7,9 +7,14 @@
 {% endblock %}
 
 {% block main %}
-    <h1>Firulai: Formulario de Adopción:</h1>
-    <h2> Complete el siguiente Formulario</h2>
-    <p>{{ fecha_hora }}</p>
+<h2>Alta de Postulante</h2>
+<form method="POST" action="{% url 'FormularioAdop' %}">
+    {% csrf_token %}
+    {{FormularioAdop.as_p}} 
+    
+
+    <input type="submit">
+</form>
 
     
 {% endblock %}
