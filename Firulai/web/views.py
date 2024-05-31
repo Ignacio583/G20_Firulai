@@ -18,10 +18,10 @@ def Refugio_1 (request):
 def alta_postulante(request):
     contexto={}
     if request.method == "GET":
-        contexto['FormularioAdop']= FormularioAdop()
+        contexto['alta_postulante']= FormularioAdop()
     else: #asumo que es un POST y me crea un diccionario con los datos que el usuario ingreso en el formulario
         form = FormularioAdop(request.POST)
-        contexto['FormularioAdop']= form
+        contexto['alta_postulante']= form
         #validamos el form
         if form.is_valid():
             #Si el form es correcto lo redirijo a una vista segura como por ejemplo el index
@@ -29,7 +29,7 @@ def alta_postulante(request):
         #Si el FORM es correcto, lo redirijo a una vista segura, como el index, para que no se vuelva a completar el formulario.
             return redirect('index') #el return debe ir cerrando el ciclo y en este caso cerrando el segundo if
     print(request.POST )
-    return render(request, 'web/FormularioAdop.html', contexto)
+    return render(request, 'web/alta_postulante.html', contexto)
 
 
 def Contacto (request):
