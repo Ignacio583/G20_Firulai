@@ -69,3 +69,8 @@ exposición grupal del mismo en funcionamiento (se puede utilizar el ambiente de
 intentando no extender la misma más de 15 minutos. Según decisión del instructor, en la exposición
 final se puede brindar la posibilidad de exponer mediante la preparación de un video, donde deberán
 exponer todas las personas que integren el equipo, en caso de no poder realizarlo en vivo. _
+
+
+
+
+NOTA para mi: para el correcto funcionamiento recomiendo crear el entorno virtual con el nombre que se desee, es indiferente, luego instalamos django dentro y actualizamos el pip y luego hacemos el git clone para que todo se sincronice como deberia.
