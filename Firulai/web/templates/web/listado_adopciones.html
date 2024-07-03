@@ -1,0 +1,26 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block titulo %} Listado de Adopciones {% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'web/styles/index.css' %}">
+{% endblock %}
+
+{% block main %}
+    <h2>Listado de Adopciones</h2>
+
+    <ul> 
+        {% for adopcion in adopciones %}
+            <li>
+                <strong>Postulante:</strong> {{ adopciones.postulacion.nombre }} <br>
+                <strong>Mascota:</strong> {{ adopciones.adopcion.nombre }} ({{ adopcion.adopcion.especie }}) <br>
+                <strong>Fecha de Adopción:</strong> {{ adopciones.fecha_adopcion }}
+            </li>
+        {% endfor %} 
+    </ul>
+{% endblock %}
+
+
+
+listado_colaborador

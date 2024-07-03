@@ -1,0 +1,8 @@
+h2 {
+    background-color: rgb(118, 7, 48);
+
+    padding: 25px;
+    color: white;
+    border-top-right-radius: 15px;
+    border-radius: 5px;
+}

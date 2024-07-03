@@ -1,0 +1,29 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block titulo %} Listado de Colaboradorer {% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'web/styles/listado_colaborador.css' %}">
+{% endblock %}
+
+{% block main %}
+    <h2>Listado de Colaboradores</h2>
+
+    <ul> 
+        {% for Colaborador in Colaborador %} 
+
+            <li>{{ Colaborador.nombre }}</li> 
+            <li>{{ Colaborador.apellido }}</li> 
+            <li>{{ Colaborador.dni }}</li>
+            <li>{{ Colaborador.cuit }}</li>
+            <li>{{ Colaborador.turno }}</li>
+            <hr/> 
+            <!-- If object_list is empty  -->
+        {% empty %} 
+            <li>No hay Colaboradores cargados</li> 
+        {% endfor %} 
+    </ul>
+{% endblock %}
+
+
