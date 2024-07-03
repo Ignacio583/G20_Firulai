@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #d3dddd, #45314e, #1e51fa);
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header,
+main,
+footer {
+    padding: 15px;
+}
+
+header .messages {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border-radius: 5px;
+}
+
+header .messages .success {
+    background-color: rgba(0, 255, 0, 0.5);
+    padding: 15px;
+    color: white;
+}
+
+main {
+    flex: 1;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+
+}

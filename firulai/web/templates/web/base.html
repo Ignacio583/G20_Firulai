@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRULAI - {% block titulo %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'web/styles/base.css' %}">
+
+    {% block extra_css %}{% endblock %}
+
+</head>
+<body>
+    <header>
+        <h1>Firulai: Siempre hay un lugar para una Mascota</h1>
+        <nav class="centered">
+            <img src="{% static 'web/img/Logo-01.png' %}" alt="">
+                <li><a class="button" href="{% url 'index' %}">Index</a></li>
+                <li><a class="button" href="{% url 'refugio' %}">Sobre Firulais</a></li>
+                {% if user.is_authenticated %}<li><a class="button" href="{% url 'alta_postulante' %}" href="{% url 'alta_postulante' %}">Formulario de Postulante</a></li>{% endif %}
+                {% if user.is_authenticated %}<li><a class="button" href="{% url 'alta_adopcion' %}" href="{% url 'alta_adopcion' %}">Formulario de Adopcion</a></li>{% endif %}
+                {% if user.is_authenticated %}<li><a class="button" href="{% url 'alta_mascota' %}" href="{% url 'alta_mascota' %}">Ingreso de Mascota</a></li>{% endif %}
+                {% if user.is_authenticated %}<li><a class="button" href="{% url 'listado_postulante' %}" href="{% url 'listado_postulante' %}">Listado de Postulantes</a></li>{% endif %}
+                {% if user.is_authenticated %}<li><a class="button" href="{% url 'listado_colaborador' %}" href="{% url 'listado_colaborador' %}">Listado de Colaboradores</a></li>{% endif %}
+                {% if user.is_authenticated %}<li><a class="button" href="{% url 'listado_adopciones' %}" href="{% url 'listado_adopciones' %}">Listado de Adopciones</a></li>{% endif %}
+        <!-- Index sobre firulai/ubicación y contacto contacto es un link interno
+         -->        
+            
+            <div class="actions">
+                {% if not user.is_authenticated %}<a class="login button" href="{% url 'login' %}">Login</a> {%endif%}
+                {% if user.is_authenticated %}<a class="logout button" href="{% url 'logout' %}">Logout</a> {%endif%}
+            </div>
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li {% if message.tags %} class="{{message.tags}}" {%endif%}> {{message}}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </nav>
+    </header>
+    <main class="centered">
+        {% block main %}{% endblock %}
+    </main>
+    <footer class="centered">
+        <p>FIRULAI - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html> 
