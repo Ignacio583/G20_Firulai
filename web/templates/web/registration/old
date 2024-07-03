@@ -1,0 +1,25 @@
+<nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Index</a></li>
+                <li><a href="{% url 'refugio' %}">Sobre Firulais</a></li>
+                <li><a href="{% url 'alta_adopcion' %}">Formulario de Adopción</a></li>
+                <li><a href="{% url 'listado_adopciones' %}">Listado de Adopciones</a></li>
+                <li><a href="{% url 'alta_mascota' %}">Alta de Mascota</a></li>
+                <li><a href="{% url 'alta_postulante' %}">Alta de Postulante</a></li>
+                <li><a href="{% url 'listado_postulante' %}">Listado de Postulantes</a></li>
+                <li><a href="{% url 'listado_colaborador' %}">Listado de Colaboradores</a></li>
+                
+        <!-- Index sobre firulai/ubicación y contacto contacto es un link interno
+         --><div class="actions">
+            {% if not user.is_authenticated %}<a class="login button" href="{% url 'login' %}">Login</a> {%endif%}
+            {% if user.is_authenticated %}<a class="logout button" href="{% url 'logout' %}">Logout</a> {%endif%}
+        </div>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li {% if message.tags %} class="{{message.tags}}" {%endif%}> {{message}}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+            </ul>
+        </nav>

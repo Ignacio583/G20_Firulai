@@ -1,0 +1,20 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block titulo %}FIRULAI - Alta Mascota{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'web/styles/index.css' %}">
+{% endblock %}
+
+{% block main %}
+<h2>Alta de Mascota</h2>
+<form method="POST" action="{% url 'alta_mascota' %}">
+    {% csrf_token %}
+    {{alta_mascota_form.as_p}} 
+    <input type="submit">
+</form>
+
+    
+{% endblock %}
+
+

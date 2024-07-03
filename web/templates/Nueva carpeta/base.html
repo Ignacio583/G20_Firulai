@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRULAI - {% block titulo %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'web/styles/base.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    {% block extra_css %}{% endblock %}
+
+</head>
+<body>
+    <header>
+        
+        <nav class="centered">
+            <img src="{% static 'web/img/Logo-01.png' %}" alt="">
+            <a href="{% url 'index' %}">Inicio</a>
+            <a href="{% url 'Refugio_1' %}">Sobre Firulais</a>
+            <a href="{% url 'alta_postulante' %}">Formulario de Adopción</a>
+            <a href="{% url 'alta_mascota' %}">Alta Mascota</a>
+            <a href="{% url 'Contacto' %}">Contacto</a>
+        </nav>
+    </header>
+    <main class="centered">
+        <h1 class="centered">Firulai: Siempre hay un lugar para una Mascota</h1>
+        {% block main %}{% endblock %}
+    </main>
+    <footer class="centered">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/nuestro_instagram" target="_blank">
+              <i class="fab fa-instagram fa-2x fa-fw"></i>
+            </a>
+            <a href="https://www.facebook.com/nuestro_facebook" target="_blank">
+              <i class="fab fa-facebook fa-2x fa-fw"></i>
+            </a>
+        </div>
+        <div>
+        <p>FIRULAI - Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+</html> 

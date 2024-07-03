@@ -1,0 +1,45 @@
+h2{
+    background-color: blueviolet;
+    padding: 25px;
+    margin-top: 25px;
+    color: white;
+    border-top-right-radius: 15px;
+    border-radius: 5px;
+}
+
+.seccion-flex {
+  display: flex; /* Activar Flexbox */
+  align-items: flex-start; /* Alinear verticalmente el contenido */
+}
+
+.texto-inicial {
+  flex: 1; /* Ocupar todo el espacio disponible */
+  padding: 30px;
+}
+
+.imagen-inicial {
+  width: auto; /* Ajustar el ancho de la imagen */
+  margin-left: 20px;
+}
+
+
+.image-section {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+  }
+  
+.image-section img {
+    max-width: max-content;
+    height: auto;
+    margin: 0 20px;
+    border: 1px solid #ccc;
+  }
+
+.mapa iframe {
+    padding: auto;
+    width: 1000px;
+    height: 400px;
+  }  

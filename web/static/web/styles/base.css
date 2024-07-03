@@ -1,0 +1,79 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /*font-weight: bold;*/
+}
+
+a {
+    display: inline-block;
+    padding: 10px 20px 5px 5px;
+    /*background-color: blueviolet;*/
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: limegreen;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  a:hover {
+    color: blueviolet; /* Color de texto al pasar el puntero */
+    font-weight: bold;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  /*background: linear-gradient(to bottom, #509799, #45314e, #1e51fa);*/
+    background-color: rgb(0, 255, 255);
+}
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header, main, footer {
+    padding: 15px;
+}
+
+header .messages {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border-radius: 5px;
+}
+
+header .messages .success {
+    background-color: rgba(0,255,0,0.5);
+    padding: 15px;
+    color: white;
+}
+
+
+main {
+    flex: 1;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+}
+footer{
+    background-color: rgba(255, 255, 255);
+
+}
+
+.social-icons {
+    display: flex; /* Arrange icons in a row */
+    justify-content: center; /* Center the icons */
+  }
+  
+.social-icons a {
+    color:  blueviolet;/* Set icon color to white */
+    text-decoration: none; /* Remove link underline */
+    margin: 0 10px; /* Add spacing between icons */
+  }

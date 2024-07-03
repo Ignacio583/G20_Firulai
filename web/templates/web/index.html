@@ -1,0 +1,40 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block titulo %}FIRULAI{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'web/styles/index.css' %}">
+{% endblock %}
+
+{% block main %}
+
+<section class="seccion-flex">    
+
+    <div class="texto-inicial">
+        <h3>El Refugio Firulai se creo pensado en dar <br> un hogar a nuestras amadas mascotas, <br> vení y aportá un lugar para ellas, te necesitan</h3>
+    </div>
+    <div class="imagen-inicial">
+        <img src="{% static 'web/img/slider-img.png' %}" alt="">
+    </div>
+</section>
+<div>
+    <section class="image-section">
+        <img src="{% static 'web/img/g-1.png' %}" alt="">
+        <img src="{% static 'web/img/g-3.png' %}" alt="">
+        <img src="{% static 'web/img/g-4.png' %}" alt="">
+        <img src="{% static 'web/img/g-5.png' %}" alt="">
+    </section>
+    </div>
+    
+
+    <div>
+    <h2 class="centered">Aquí estamos</h2>
+    <section class="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13134.417477609652!2d-58.47441909999999!3d-34.6141645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1720029769208!5m2!1ses!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>"
+    </section>
+    </div>
+{% endblock %}
+
+
+
+

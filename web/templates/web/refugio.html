@@ -1,0 +1,25 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block titulo %} Refugio {% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'web/styles/index.css' %}">
+{% endblock %}
+
+{% block main %}
+    <h2>Refugio</h2>
+
+    <a href="{% url 'index' %}">Volver</a>
+
+    <div>
+        <section class="image-section">
+            <img src="{% static 'web/img/port01.jpg' %}" alt="">
+            <img src="{% static 'web/img/port02.jpg' %}" alt="">
+            <img src="{% static 'web/img/port03.jpg' %}" alt="">
+            <img src="{% static 'web/img/port04.jpg' %}" alt="">
+        </section>
+    </div>
+
+   
+{% endblock %}
+

@@ -1,0 +1,28 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block titulo %} Listado de Postulante {% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'web/styles/index.css' %}">
+{% endblock %}
+
+{% block main %}
+    <h2>Listado de Postulantes</h2>
+
+    <ul> 
+        {% for Postulante in Postulante %} 
+
+            <li>{{ Postulante.nombre }}</li> 
+            <li>{{ Postulante.apellido }}</li> 
+            <li>{{ Postulante.dni }}</li>
+            <li>{{ Postulante.telefono }}</li> 
+            <li>{{ Postulante.calle }}</li>
+            <li>{{ Postulante.numero }}</li>
+            <hr/> 
+            <!-- If object_list is empty  -->
+        {% empty %} 
+            <li>No hay Postulantes cargados</li> 
+        {% endfor %} 
+    </ul>
+{% endblock %}
